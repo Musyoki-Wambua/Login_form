@@ -149,9 +149,79 @@
     width: max-content;
     height: max-content;
     position: absolute;
-    right: .75rem;
+    right: 4rem;
     top: 0;
     bottom: 0;
     margin: auto 0;
     font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .login_check{
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+  }
+
+  .login_check_input{
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--text-color);
+    background-color: hsla(244, 16%, 92%, .2);
+    border-radius: .25rem;
+  }
+
+  .login_check_input:checked{
+    background: var(--first-color);
+  }
+
+  .login_check_input:checked::before{
+    content: '✔';
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    transform: translate(1.5px, -3.5px);
+  }
+
+  .login_check_label{
+    font-size: var(--small-font-size);
+  }
+
+  .login_buttons{
+    display: flex;
+    column-gap: .75rem;    
+  }
+
+  .login_button{
+    width: 100%;
+    padding: 14px 2rem;
+    border-radius: 6px;
+    background: linear-gradient(180deg,
+                var(--first-color),
+                var(--second-color) );
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    box-shadow: 0 6px 24px hsla(244, 75%, 48%, .5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .login_button_ghost{
+    background: hsla(244, 16%, 92%, .6);
+    border: 2px solid var(--first-color);
+    box-shadow: none;
+    color: var(--first-color);
+    width: 100%;
+    padding: 14px 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  .login_forgot{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--first-color);
+    text-decoration: none;
   }
